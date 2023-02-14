@@ -456,7 +456,7 @@ app.put('/employees/:id', (req, res) => {
 	const idDevice = +req.body.id_employee_type;
 
 	const query = `UPDATE tbl_users
-	SET login = ?, password = ?, email = ?, id_employee_type=?
+	SET login = ?, password = md5(?), email = ?, id_employee_type=?
 	WHERE id_user = ${id}`;
 
 	db.query(query, [login, password, email, idDevice], (error, result) => {

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import DeviceType from '../../DeviceType';
 import Producers from '../../Producers';
 
-const NewSparePart = () => {
+const NewSparePartForm = () => {
 	const [inputs, setInputs] = useState({
 		name: '',
 		type: '',
@@ -42,7 +42,7 @@ const NewSparePart = () => {
 			inputs.name === '' ||
 			inputs.producer === '' ||
 			inputs.type === '' ||
-			inputs.serialNumber
+			inputs.serialNumber === ''
 		) {
 			alert('Wprowadź poprawne dane');
 		} else {
@@ -96,4 +96,4 @@ const NewSparePart = () => {
 	);
 };
 
-export default NewSparePart;
+export default NewSparePartForm;
