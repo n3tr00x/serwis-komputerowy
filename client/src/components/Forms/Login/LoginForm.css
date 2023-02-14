@@ -1,0 +1,21 @@
+.login-form {
+	padding: 32px;
+}
+
+.login-form .input {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin: 12px 0;
+}
+
+.username,
+.password {
+	border: 0;
+	padding: 12px;
+}
+
+.login-form .submit-btn {
+	width: 100%;
+	padding: 12px;
+}

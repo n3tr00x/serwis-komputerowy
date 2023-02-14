@@ -1,0 +1,8 @@
+table td {
+	text-align: center;
+	cursor: pointer;
+}
+
+table tbody tr:hover {
+	background-color: #aaa;
+}
