@@ -5,6 +5,7 @@ const path = require('path');
 const mysql = require('mysql2');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -12,11 +13,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const db = mysql.createConnection({
-	user: 'hwio2023',
-	host: 'db4free.net',
-	port: '3306',
-	password: 'qwertyuiop',
-	database: 'serwis_reparex',
+	user: process.env.USER,
+	host: process.env.HOST,
+	port: process.env.PORT,
+	password: process.env.PASSWORD,
+	database: process.env.DATABASE,
 	multipleStatements: true,
 });
 
